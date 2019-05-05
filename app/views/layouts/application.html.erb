@@ -13,6 +13,8 @@
   <body>
     <%= react_component("HelloWorld", { greating: "Hello from react-rails" }) %>
     <% if user_signed_in? %>
+      <p><%= current_user.user_name%>でログインしています</p>
+      <p>使用言語は<%= current_user.locale %>です</p>
       <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
     <% else %>
       <%= link_to '新規登録', new_user_registration_path %>
