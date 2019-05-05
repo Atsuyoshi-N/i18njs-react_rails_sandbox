@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
     locale_param = Rails.configuration.i18n.available_locales&.include?(params[:locale].to_s.to_sym) && params[:locale]
     if user_signed_in?
       I18n.locale = locale_param || cookies[:locale] || current_user.locale || I18n.default_locale
+      current_user.locale = I18n.locale
+      current_user.save
     else
       I18n.locale = locale_param || cookies[:locale] || I18n.default_locale
     end
