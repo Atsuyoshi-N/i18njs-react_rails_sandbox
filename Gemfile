@@ -68,3 +68,6 @@ gem 'react-rails'
 # globalize
 gem 'globalize'
 
+# user authentication
+gem 'devise'
+

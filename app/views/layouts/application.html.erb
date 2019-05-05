@@ -12,6 +12,17 @@
 
   <body>
     <%= react_component("HelloWorld", { greating: "Hello from react-rails" }) %>
+    <% I18n.available_locales.reject{|l| l == I18n.locale.to_sym}.each do |locale| %>
+      <p>使用言語は<%= I18n.locale %>です</p>
+      <%= link_to "#{locale.to_s}に切り替える", url_for(params.permit().merge(locale: (locale == :ja ? :ja : locale))) %>
+    <% end %>
+    <% if user_signed_in? %>
+      <p><%= current_user.user_name%>でログインしています</p>
+      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to '新規登録', new_user_registration_path %>
+      <%= link_to 'ログイン', new_user_session_path %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
