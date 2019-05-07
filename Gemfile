@@ -71,3 +71,4 @@ gem 'globalize'
 # user authentication
 gem 'devise'
 
+gem 'i18n-js'

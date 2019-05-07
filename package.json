@@ -7,6 +7,7 @@
     "@types/react": "^16.8.16",
     "@types/react-dom": "^16.8.4",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "i18n-js": "^3.2.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
