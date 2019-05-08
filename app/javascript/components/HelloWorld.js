@@ -9,6 +9,8 @@ class HelloWorld extends React.Component {
   render () {
 
     console.log(I18n.t('hello'));
+    console.log(I18n.t('devise.confirmations.confirmed'));
+    console.log(I18n.t('activerecord.attributes.user.confirmation_sent_at'));
     return (
       <React.Fragment>
         <p>{I18n.t('hello')}</p>
