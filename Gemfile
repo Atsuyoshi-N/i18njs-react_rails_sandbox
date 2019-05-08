@@ -73,4 +73,3 @@ gem 'devise'
 
 gem 'i18n-js'
 
-gem 'gon'
