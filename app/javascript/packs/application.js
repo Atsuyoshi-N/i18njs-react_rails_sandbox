@@ -19,4 +19,5 @@ console.log('Hello World from Webpacker')
 // Support component names relative to this directory:
 var componentRequireContext = require.context("components", true);
 var ReactRailsUJS = require("react_ujs");
+import I18n from "i18n-js/index.js.erb";
 ReactRailsUJS.useContext(componentRequireContext);
