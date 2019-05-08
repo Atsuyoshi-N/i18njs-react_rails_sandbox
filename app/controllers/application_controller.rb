@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
       I18n.locale = locale_param || cookies[:locale] || I18n.default_locale
     end
     cookies[:locale] = I18n.locale.to_s
-    gon.locale = I18n.locale.to_s
+    gon.watch.locale = I18n.locale.to_s
     @locale_path = I18n.locale==I18n.default_locale ? nil : I18n.locale
   end
   protected
