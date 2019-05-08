@@ -25,6 +25,4 @@
 #   - file: "app/assets/javascripts/i18n/translations.js"
 #     only: "*"
 #
-translations:
-  - file: "config/i18n.js.yml"
 
