@@ -3,6 +3,9 @@ import PropTypes from "prop-types"
 import I18n from 'i18n-js/index.js.erb'
 class HelloWorld extends React.Component {
   render () {
+
+    console.log(I18n.t('activerecord.errors.messages.record_invalid'));
+    console.log(I18n.t('date.abbr_day_names'))
     console.log(I18n.t('hello'));
     return (
       <React.Fragment>
